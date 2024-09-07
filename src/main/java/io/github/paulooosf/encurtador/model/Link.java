@@ -2,6 +2,7 @@ package io.github.paulooosf.encurtador.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;
 
@@ -11,13 +12,13 @@ public class Link {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotBlank(message = "O link não pode ser nulo!")
+
     private String link;
-    @NotBlank(message = "O código do link não pode ser nulo!")
+
     private String codigo;
-    @NotBlank(message = "A data não pode ser nula!!")
+
     private LocalDateTime data;
-    @NotBlank(message = "Os acessos não podem ser nulos!")
+
     private Integer acessos;
 
     public Link() {

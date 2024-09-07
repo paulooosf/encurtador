@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+
 @RestController
 @RequestMapping("/link")
 public class LinkController {
@@ -15,8 +18,9 @@ public class LinkController {
     LinkService service;
 
     @GetMapping("/{codigo}")
-    public ResponseEntity<LinkDTO> acessar (@PathVariable String codigo) {
-        return ResponseEntity.ok(service.acessar(codigo));
+    public ResponseEntity<Void> acessar (@PathVariable String codigo) throws URISyntaxException {
+        URI uri = new URI(service.acessar(codigo));
+        return ResponseEntity.status(302).location(uri).build();
     }
 
     @GetMapping("/info/{id}")

@@ -19,7 +19,7 @@ public class LinkService {
     @Autowired
     private LinkRepository repository;
 
-    public LinkDTO acessar (String codigo) {
+    public String acessar (String codigo) {
         Optional<Link> linkOpt = repository.findByCodigo(codigo);
         if (linkOpt.isEmpty()) {
             throw new NotFoundException();
@@ -28,7 +28,7 @@ public class LinkService {
         link.setAcessos(link.getAcessos() + 1);
         repository.save(link);
 
-        return new LinkDTO(link.getLink());
+        return link.getLink();
     }
 
     public LinkInfoDTO buscar (Long id) {
@@ -45,7 +45,9 @@ public class LinkService {
 
         URI uri = ServletUriComponentsBuilder
                 .fromCurrentContextPath()
-                .buildAndExpand(link.getCodigo())
+                .path("link/")
+                .path(link.getCodigo())
+                .buildAndExpand()
                 .toUri();
         return new LinkDTO(uri.toString());
     }
@@ -59,7 +61,13 @@ public class LinkService {
         link.setLink(linkEditado);
         repository.save(link);
 
-        return new LinkDTO(link.getLink());
+        URI uri = ServletUriComponentsBuilder
+                .fromCurrentContextPath()
+                .path("link/")
+                .path(link.getCodigo())
+                .buildAndExpand()
+                .toUri();
+        return new LinkDTO(uri.toString());
     }
 
     public void deletar(Long id) {
