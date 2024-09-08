@@ -13,12 +13,16 @@ public class Link {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "O link deve ser preenchido!")
     private String link;
 
+    @NotBlank(message = "O código deve ser gerado!")
     private String codigo;
 
+    @NotNull(message = "A data deve ser gerada!")
     private LocalDateTime data;
 
+    @NotNull(message = "O número de acessos deve ser gerado!")
     private Integer acessos;
 
     public Link() {
