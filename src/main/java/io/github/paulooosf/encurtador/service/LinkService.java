@@ -31,8 +31,8 @@ public class LinkService {
         return link.getLink();
     }
 
-    public LinkInfoDTO buscar (Long id) {
-        Optional<Link> linkOpt = repository.findById(id);
+    public LinkInfoDTO buscar (String codigo) {
+        Optional<Link> linkOpt = repository.findByCodigo(codigo);
         if (linkOpt.isEmpty()) {
             throw new NotFoundException();
         }

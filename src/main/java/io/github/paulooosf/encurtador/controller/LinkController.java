@@ -25,10 +25,10 @@ public class LinkController {
         return ResponseEntity.status(302).location(uri).build();
     }
 
-    @GetMapping("/info/{id}")
+    @GetMapping("/info/{codigo}")
     @Operation(summary = "Lista informações sobre um link", description = "A resposta da requisição irá mostrar informações gerais sobre o link encurtado.")
-    public ResponseEntity<LinkInfoDTO> buscar (@PathVariable Long id) {
-        return ResponseEntity.ok(service.buscar(id));
+    public ResponseEntity<LinkInfoDTO> buscar (@PathVariable String codigo) {
+        return ResponseEntity.ok(service.buscar(codigo));
     }
 
     @PostMapping
