@@ -1,41 +1,20 @@
-<h1 align="center">
-Projeto Encurtador de Links
+<h1 align="center">Encurtador de Links</h1>
+<h4 align="center">O projeto é capaz de receber links e transformar eles em novas URLs reduzidas, com o prefixo do servidor e um sufixo aleatório de 6 digitos. A URL gerada redireciona até o link originalmente encurtado.</h4>
+<p align="center">
+  <img alt="Java" src="https://img.shields.io/badge/JAVA-%23F80820?style=for-the-badge&logoColor=%23F80820&labelColor=black">
+  <img alt="Spring" src="https://img.shields.io/badge/SPRING-%236DB33F?style=for-the-badge&logo=spring&logoColor=%236DB33F&labelColor=black">
+  <img alt="Apache Maven" src="https://img.shields.io/badge/maven-%23C71A36?style=for-the-badge&logo=apache%20maven&logoColor=%23C71A36&labelColor=black&color=%23C71A36">
+</p>
+<p align="center">
+  <a href="#funcionalidades">Funcionalidades</a> •
+  <a href="#créditos">Créditos</a>
+</p>
 
-JAVA/SPRING BOOT
-</h1>
-</h2>
-<h2 align="center">
-<a href="https://paulooosf.github.io" target="_blank">Paulo Henrique</a>
-</h2>
-
-
-## 📝 Índice
-
-<ul>
-    <li>Sobre o Projeto</li>
-    <li>Tecnologias utilizadas</li>
-    <li>Autor do Projeto</li>
-</ul>
-
-
-## :desktop_computer: Sobre o Projeto
-
-
-<p>O projeto é capaz de receber links e transformar eles em novas URLs reduzidas, com o prefixo do servidor e um sufixo aleatório de 6 digitos. A URL gerada redireciona até o link originalmente encurtado.
- 
-  Há um endpoint capaz de prover informações sobre um link encurtado, como a sua url original e o número de acessos.
+## Funcionalidades
+Há um endpoint capaz de prover informações sobre um link encurtado, como a sua url original e o número de acessos.
       
-  Todas as classes possuem seus respectivos CRUDs mapeados, de acordo com a documentação do Swagger que pode ser acessada ao rodar o servidor:
-  [Documentação Swagger](http://localhost:8080/swagger-ui)</p>
+Todas as classes possuem seus respectivos CRUDs mapeados, de acordo com a documentação do Swagger que pode ser acessada ao rodar o servidor:
+[Documentação Swagger](http://localhost:8080/swagger-ui)</p>
 
-## :hammer_and_wrench: Tecnologias utilizadas
-
-- [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
-- [IntelliJ Idea](https://www.jetbrains.com/pt-br/idea/)
-- [GitHub](https://github.com/)
-- [Postman](https://www.postman.com/)
-- [Maven](http://maven.apache.org/install.html)
-
-## 👀 Autor
-  - Paulo Henrique - [paulooosf](http://github.com/paulooosf)
-
+## Créditos
+- Paulo Henrique - [paulooosf](http://github.com/paulooosf)
